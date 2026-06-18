@@ -1,0 +1,53 @@
+@font-face{font-family:'Gilroy';src:url('https://fs.getcourse.ru/fileservice/file/download/h/c5ad85b5bf16600a49d40ad5ed235e33.woff/a/934144/sc/228') format('woff');font-weight:400;font-style:normal}
+@font-face{font-family:'Gilroy';src:url('https://fs.getcourse.ru/fileservice/file/download/h/6e5d6a1c28b12636f6043ff99fc0ce86.woff/a/934144/sc/205') format('woff');font-weight:500;font-style:normal}
+@font-face{font-family:'Gilroy';src:url('https://fs.getcourse.ru/fileservice/file/download/h/a0b69f25a8d7f98144131ebbd1a90d1e.woff/a/934144/sc/234') format('woff');font-weight:600;font-style:normal}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{max-width:100%;height:auto;display:block}
+a{transition:all 0.3s;text-decoration:none;color:inherit}
+p{margin:0}
+strong{font-weight:500}
+::selection{background:#abb7bd;color:#fff}
+body{margin:0;font-family:'Gilroy',Roboto,sans-serif;font-weight:400;background:#fff;-webkit-font-smoothing:antialiased}
+
+.container{max-width:1170px;margin:0 auto;padding:0 15px}
+
+/* ===== Cookie banner ===== */
+.cookie-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:99997;opacity:0;pointer-events:none;transition:opacity 0.4s}
+.cookie-overlay.show{opacity:1;pointer-events:auto}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,0.12);z-index:99998;padding:20px 24px;transform:translateY(100%);transition:transform 0.5s ease;max-height:90vh;overflow-y:auto}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-banner__inner{max-width:1100px;margin:0 auto}
+.cookie-banner__text{font-size:14px;line-height:1.5;color:#444;margin-bottom:16px}
+.cookie-banner__text a{color:#FF7F95;text-decoration:underline}
+.cookie-banner__text a:focus-visible{outline:2px solid #FF7F95;outline-offset:2px;border-radius:2px}
+.cookie-banner__actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cookie-banner__btn{min-width:140px;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Gilroy',Roboto,sans-serif;transition:all 0.2s;border:2px solid transparent;text-align:center;min-height:24px;line-height:1.2}
+.cookie-banner__btn:focus-visible{outline:3px solid #FF7F95;outline-offset:2px}
+.cookie-banner__btn--accept{background:#FF7F95;color:#fff;border-color:#FF7F95}
+.cookie-banner__btn--accept:hover{background:#e06a7f;border-color:#e06a7f}
+.cookie-banner__btn--reject{background:#fff;color:#666;border-color:#ccc}
+.cookie-banner__btn--reject:hover{background:#f5f5f5;border-color:#999;color:#333}
+.cookie-banner__btn--settings{background:transparent;color:#FF7F95;border-color:#FF7F95}
+.cookie-banner__btn--settings:hover{background:#fff0f3}
+.cookie-banner__btn--save{background:#FF7F95;color:#fff;border-color:#FF7F95}
+.cookie-banner__btn--save:hover{background:#e06a7f}
+.cookie-settings{display:none;margin-top:16px;padding-top:16px;border-top:1px solid #eee}
+.cookie-settings.open{display:block}
+.cookie-settings__title{font-size:15px;font-weight:600;color:#222;margin-bottom:12px}
+.cookie-setting{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:10px 12px;background:#f9f9f9;border-radius:10px}
+.cookie-setting input[type=checkbox]{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:#FF7F95;cursor:pointer}
+.cookie-setting input[type=checkbox]:focus-visible{outline:2px solid #FF7F95;outline-offset:2px}
+.cookie-setting label{cursor:pointer;flex:1;font-size:13px;line-height:1.4;color:#555}
+.cookie-setting label strong{display:block;font-weight:600;color:#333;font-size:14px}
+.cookie-setting input:disabled+label{opacity:0.6}
+.cookie-setting input:disabled+label strong{color:#999}
+.cookie-banner__actions--settings{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:640px){
+  .cookie-banner{padding:16px}
+  .cookie-banner__text{font-size:13px}
+  .cookie-banner__actions{flex-direction:column;width:100%}
+  .cookie-banner__btn{width:100%;min-width:0;padding:12px 16px}
+  .cookie-banner__actions--settings{flex-direction:column}
+}
